@@ -1,0 +1,37 @@
+<報告方針>
+1.講解演算法和整體系統的功能
+(1) window function – Hamming window
+(2) FFT
+(3) descrambler
+2.講解程式
+(1) I/O assignment
+(2) #pragma
+3.分析電路表現
+(1) 硬體資源使用程度
+(2) cycle數
+(3) throughput
+4.討論
+(1) 波形圖-控制訊號和資料訊號
+(2) 遇到的問題:原本的tcl做不出IP、wrapper包不起來、valid比正確資料早跳。
+5.參考資料與附件
+(1) Github連結
+<報告內容>
+1.解釋原始碼
+2.解釋系統
+3.解釋pragma作用
+#pragma HLS UNROLL factor=UF
+1.如果for迴圈沒有加UNROLL，電路只用一組硬體資源。
+2.加UNROLL等同parallelism，增加計算硬體資源使用量，減少運作cycle數。
+3.factor=N，代表展開N倍硬體資源。
+#pragma HLS PIPELINE rewind
+4.分析時序關係
+(1)吞吐量
+(2)電路初始狀態
+(3)CSim、CoSim和waveform三者比較
+5.硬體資源使用量
+6.(optional)自己後續優化
+7.(no ceiling)自己所觀察到/學到的內容
+8.遇到的問題與處理方式
+(1)tcl不能跑
+(2)HDL wrapper跑不出來
+*記得要加Github link在報告內
